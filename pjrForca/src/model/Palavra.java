@@ -1,14 +1,18 @@
 package model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
+@Embeddable
 @Entity
 @Table(name="tbPalavra")
 public class Palavra  implements EntidadeBase{
     private Long id;
     private String descricao;
     private String dificuldade;
+    @OneToMany(mappedBy = "palavra", orphanRemoval = true)
+    private List<Forca> forcas = new ArrayList<Forca>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
