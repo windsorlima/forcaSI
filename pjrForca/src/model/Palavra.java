@@ -15,7 +15,7 @@ public class Palavra  implements EntidadeBase{
     private List<Forca> forcas = new ArrayList<Forca>();
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idPalavra")
     public Long getId() { return id; }
     public void setId(Long id){ this.id = id;}
