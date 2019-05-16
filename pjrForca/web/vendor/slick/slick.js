@@ -1336,7 +1336,7 @@
                 });
 
                 if (slideControlIndex !== -1) {
-                   var ariaButtonControl = 'slick-slide-control' + _.instanceUid + slideControlIndex
+                   var ariaButtonControl = 'slick-slide-controller' + _.instanceUid + slideControlIndex
                    if ($('#' + ariaButtonControl).length) {
                      $(this).attr({
                          'aria-describedby': ariaButtonControl
@@ -1354,7 +1354,7 @@
 
                 $(this).find('button').first().attr({
                     'role': 'tab',
-                    'id': 'slick-slide-control' + _.instanceUid + i,
+                    'id': 'slick-slide-controller' + _.instanceUid + i,
                     'aria-controls': 'slick-slide' + _.instanceUid + mappedSlideIndex,
                     'aria-label': (i + 1) + ' of ' + numDotGroups,
                     'aria-selected': null,

@@ -45,19 +45,24 @@
 
     <form action="CadastroServlet" method="POST">
         <div class="form-group">
-            <label for="exampleInputNome">Nome</label>
-            <input type="text" class="form-control" id="exampleInputNome" name="nome" aria-describedby="nomelHelp" placeholder="Enter with your name">
+            <label for="palavraChave">Palavra a ser Cadastrada: </label>
+            <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
         </div>
         <div class="form-group">
-            <label for="exampleInputLogin">Login </label>
-            <input type="text" class="form-control" id="exampleInputLogin" name="login" aria-describedby="emailHelp" placeholder="Enter with your login">
+            <label for="dica">Dica para Palavra</label>
+            <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" required>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Password">
+            <label for="dica">Grau de difiuldade</label>
+            <select>
+                <option> Dificuldade</option>
+                <option> Fácil</option>
+                <option> Médio</option>
+                <option> Díficil</option>
+            </select>
         </div>
         <input type="submit" value="Gravar"/>
-        </form>
+    </form>
 </section>
 
 

@@ -1,10 +1,7 @@
 package view;
 
-import control.dao.DaoGenerico;
-import model.Palavra;
+import dao.DaoGenerico;
 import model.Usuario;
-
-import java.util.Scanner;
 
 public class Main {
 

@@ -952,7 +952,7 @@ var Tweenable = (function () {
   /**
    * Create a Bezier easing function and attach it to `{{#crossLink
    * "Tweenable/formula:property"}}Tweenable#formula{{/crossLink}}`.  This
-   * function gives you total control over the easing curve.  Matthew Lein's
+   * function gives you total controller over the easing curve.  Matthew Lein's
    * [Ceaser](http://matthewlein.com/ceaser/) is a useful tool for visualizing
    * the curves you can make with this function.
    * @method setBezierFunction

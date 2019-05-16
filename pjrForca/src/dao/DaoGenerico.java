@@ -1,6 +1,6 @@
-package control.dao;
+package dao;
 
-import control.ConnectionFactory;
+import controller.ConnectionFactory;
 import model.EntidadeBase;
 
 import javax.persistence.EntityManager;

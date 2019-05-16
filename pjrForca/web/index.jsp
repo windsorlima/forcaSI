@@ -70,6 +70,7 @@
       </script>
   </head>
   <body>
+            <%@include file="menu.jsp"%>
 
             <div style="width: 600px; margin: 0 auto; margin-top:20%;  ">
                 <div style="width:500px; margin 0 auto;">
