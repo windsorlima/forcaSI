@@ -43,7 +43,7 @@
 <%@include file="menu.jsp"%>
 <section style="width: 65%;">
 
-    <form action="CadastroServlet" method="POST">
+    <form action="CadastroPalavraServlet" method="POST">
         <div class="form-group">
             <label for="palavraChave">Palavra a ser Cadastrada: </label>
             <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
@@ -54,7 +54,7 @@
         </div>
         <div class="form-group">
             <label for="dica">Grau de difiuldade</label>
-            <select>
+            <select name="dificuldade" id="dificuldade">
                 <option> Dificuldade</option>
                 <option> Fácil</option>
                 <option> Médio</option>

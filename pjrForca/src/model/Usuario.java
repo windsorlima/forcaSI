@@ -36,4 +36,9 @@ public class Usuario implements EntidadeBase {
     public void setSenha(String senha){this.senha = senha;}
 
 
+    public Usuario logar(String login, String senha){
+
+        return null;
+    }
+
 }

@@ -3,9 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-
     <servlet>
         <servlet-name>CadastroServlet</servlet-name>
-        <servlet-class>control.CadastroServlet</servlet-class>
+        <servlet-class>controller.CadastroServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastroServlet</servlet-name>
+        <url-pattern>/CadastroServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CadastroPalavraServlet</servlet-name>
+        <servlet-class>controller.CadastroPalavraServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastroPalavraServlet</servlet-name>
+        <url-pattern>/CadastroPalavraServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -7,4 +7,17 @@
         <servlet-name>CadastroServlet</servlet-name>
         <servlet-class>controller.CadastroServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastroServlet</servlet-name>
+        <url-pattern>/CadastroServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CadastroPalavraServlet</servlet-name>
+        <servlet-class>controller.CadastroPalavraServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastroPalavraServlet</servlet-name>
+        <url-pattern>/CadastroPalavraServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
