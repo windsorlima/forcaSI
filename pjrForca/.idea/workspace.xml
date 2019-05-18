@@ -7,56 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed1f31fd-ea43-4bd8-8d89-137e5c249cba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_4_1_5_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6__2_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/byte-buddy-1.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dom4j-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-core-5.4.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javassist-3.24.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.annotation.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.ejb.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.jms.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.resource.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.servlet.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stax-ex-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/classes/control/CadastroPalavraServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/classes/control/CadastroServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/classes/control/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/classes/control/dao/DaoGenerico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/classes/view/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/classes/view/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/vendor/progressbar/progressbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/vendor/progressbar/progressbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/vendor/slick/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/vendor/slick/slick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/vendor/slick/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pjrForca_war_exploded/vendor/slick/slick.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pjrForca/control/CadastroPalavraServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pjrForca/control/CadastroServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pjrForca/control/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pjrForca/control/dao/DaoGenerico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pjrForca/view/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pjrForca/view/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjrForca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pjrForca.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CadastroPalavraServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CadastroPalavraServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CadastroServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/CadastrarPalavra.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/CadastrarPalavra.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,11 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/CadastroPalavraServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
-              <folding>
-                <element signature="e#1325#1334#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="21" column="9" selection-start-line="16" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -88,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/CadastrarPalavra.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="870">
               <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
             </state>
           </provider>
@@ -97,17 +47,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="375">
+              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Usuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/Usuario.java">
+        <entry file="file://$PROJECT_DIR$/src/view/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="210">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/CadastroServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state relative-caret-position="105">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,11 +155,9 @@
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/control/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/src/model/EntidadeBase.java" />
-        <option value="$PROJECT_DIR$/src/view/Main.java" />
         <option value="$PROJECT_DIR$/src/control/fabrica_forca.java" />
         <option value="$PROJECT_DIR$/src/control/Fabrica_forca.java" />
         <option value="$PROJECT_DIR$/src/control/dao/DaoGenerico.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/model/Forca.java" />
         <option value="$PROJECT_DIR$/web/CadastrarUsuario.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
@@ -206,6 +175,8 @@
         <option value="$PROJECT_DIR$/web/CadastrarPalavra.jsp" />
         <option value="$PROJECT_DIR$/src/controller/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/model/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/view/Main.java" />
       </list>
     </option>
   </component>
@@ -315,7 +286,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.24-bin.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -471,11 +442,12 @@
       <workItem from="1557962238554" duration="6027000" />
       <workItem from="1557973921238" duration="2192000" />
       <workItem from="1558052388368" duration="2781000" />
+      <workItem from="1558217991043" duration="1025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40400000" />
+    <option name="totallyTimeSpent" value="41425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,9 +459,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.92236024" visible="true" weight="0.23257576" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.91900826" visible="true" weight="0.23636363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -497,7 +470,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info active="true" id="Web" order="8" sideWeight="0.07763975" side_tool="true" visible="true" weight="0.23257576" />
+      <window_info id="Web" order="8" sideWeight="0.08099174" side_tool="true" visible="true" weight="0.23636363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.27173913" />
@@ -587,30 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Logar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/CadastrarUsuario.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -625,10 +574,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/controller/CadastroPalavraServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        <state relative-caret-position="180">
+          <caret line="21" column="9" selection-start-line="16" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CadastrarPalavra.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CadastroServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Logar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -639,44 +626,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/CadastrarPalavra.jsp">
+    <entry file="file://$PROJECT_DIR$/src/model/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CadastroServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        <state relative-caret-position="435">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CadastroPalavraServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="e#1325#1334#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/view/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="210">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -736,6 +706,18 @@
       <state key="ModuleStructureConfigurable.UI">
         <settings>
           <last-edited>JPA|pjrForca</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

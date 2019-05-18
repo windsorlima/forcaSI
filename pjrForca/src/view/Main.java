@@ -12,6 +12,7 @@ public class Main {
         user.setLogin("windshow0w3");
         user.setSenha("senha");
         dU.saveOrUpdate(user);
+        System.out.println("rsrs");
     }
 
 }

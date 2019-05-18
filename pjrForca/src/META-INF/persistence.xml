@@ -9,8 +9,8 @@
  <properties>
 	 <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bdForca?createDatabaseIfNotExist=true"/>
-	 <property name="javax.persistence.jdbc.user" value="windsor" />
-	 <property name="javax.persistence.jdbc.password" value="W030911ee-" />
+	 <property name="javax.persistence.jdbc.user" value="dev" />
+	 <property name="javax.persistence.jdbc.password" value="devuni9" />
 	 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 	 <property name="hibernate.connection.shutdown" value="true" />
 	 <property name="hibernate.hbm2ddl.auto" value="update" />
