@@ -39,47 +39,30 @@
     <title>Title</title>
 </head>
 <body>
-<div class="page-wrapper">
-    <div class="page-content--bge5">
-        <div class="container">
-            <div class="login-wrap">
-                <div class="login-content">
-                    <div class="login-logo">
-                        <a href="#">
-                            <img src="images/icon/logo.png" alt="CoolAdmin">
-                        </a>
-                    </div>
-                    <div class="login-form">
-                        <form action="LoginServlet" method="post">
-                            <div class="form-group">
-                                <label>Endereço de E-mail</label>
-                                <input class="au-input au-input--full" type="text" name="login" placeholder="Login">
-                            </div>
-                            <div class="form-group">
-                                <label>Senha</label>
-                                <input class="au-input au-input--full" type="password" name="senha" placeholder="Senha">
-                            </div>
-                            <div class="login-checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember">Lembre de mim
-                                </label>
-                                <label>
-                                    <a href="#">Esqueceu a senha?</a>
-                                </label>
-                            </div>
-                            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Logar</button>
-                        </form>
-                        <div class="register-link">
-                            <p>
-                                Não tem uma conta?
-                                <a href="#">Inscreva-se aqui</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="formularioCadastro" style="margin: 0 auto;width: 50%;">
+    <form action="/examples/actions/confirmation.php" method="post">
+        <h2>Entrar</h2>
+        <br>
+        <div class="form-group">
+            <label>Login</label>
+            <input type="text" class="form-control" required="required">
         </div>
-    </div>
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" class="form-control" required="required">
+        </div>
+        <div class="form-group clearfix">
+            <button type="submit" class="btn btn-primary pull-left">Conectar</button>
+        </div>
+</div>
+</form>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 </div>
 </body>

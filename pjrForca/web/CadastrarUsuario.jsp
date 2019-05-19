@@ -41,23 +41,24 @@
 </head>
 <body>
 <%@include file="menu.jsp"%>
-<section style="width: 65%;">
-
-    <form action="CadastroServlet" method="POST">
-        <div class="form-group">
-            <label for="exampleInputNome">Nome</label>
-            <input type="text" class="form-control" id="exampleInputNome" name="nome" aria-describedby="nomelHelp" placeholder="Enter with your name">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputLogin">Login </label>
-            <input type="text" class="form-control" id="exampleInputLogin" name="login" aria-describedby="emailHelp" placeholder="Enter with your login">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Password">
-        </div>
-        <input type="submit" value="Gravar"/>
+<section>
+    <div class="formularioCadastro" style="margin: 0 auto;width: 67%;">
+        <form action="CadastroServlet" method="POST">
+            <div class="form-group">
+                <label for="exampleInputNome">Nome</label>
+                <input type="text" class="form-control" id="exampleInputNome" name="nome" aria-describedby="nomelHelp" placeholder="Insira o seu Nome">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputLogin">Login </label>
+                <input type="text" class="form-control" id="exampleInputLogin" name="login" aria-describedby="emailHelp" placeholder="Crie um login!">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="Crie uma senha!">
+            </div>
+            <input type="submit" value="Gravar"/>
         </form>
+    </div>
 </section>
 
 

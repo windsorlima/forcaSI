@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="forcaSI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/forcaSI_jar</output-path>
+    <root id="archive" name="forcaSI.jar" />
+  </artifact>
+</component>

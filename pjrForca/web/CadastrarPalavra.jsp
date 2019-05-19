@@ -6,6 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: elias
+  Date: 14/05/19
+  Time: 15:14
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <!-- Required meta tags-->
@@ -41,28 +49,30 @@
 </head>
 <body>
 <%@include file="menu.jsp"%>
-<section style="width: 65%;">
+<section>
+    <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
 
-    <form action="CadastroPalavraServlet" method="POST">
-        <div class="form-group">
-            <label for="palavraChave">Palavra a ser Cadastrada: </label>
-            <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
-        </div>
-        <div class="form-group">
-            <label for="dica">Dica para Palavra</label>
-            <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" required>
-        </div>
-        <div class="form-group">
-            <label for="dica">Grau de difiuldade</label>
-            <select name="dificuldade" id="dificuldade">
-                <option> Dificuldade</option>
-                <option> Facil</option>
-                <option> Médio</option>
-                <option> Díficil</option>
-            </select>
-        </div>
-        <input type="submit" value="Gravar"/>
-    </form>
+        <form action="CadastroPalavraServlet" method="POST">
+            <div class="form-group">
+                <label for="palavraChave">Palavra a ser Cadastrada: </label>
+                <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
+            </div>
+            <div class="form-group">
+                <label for="dica">Dica para Palavra</label>
+                <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" required>
+            </div>
+            <div class="form-group">
+                <label for="dica">Grau de difiuldade</label>
+                <select name="dificuldade" id="dificuldade">
+                    <option> Dificuldade</option>
+                    <option> Facil</option>
+                    <option> Médio</option>
+                    <option> Díficil</option>
+                </select>
+            </div>
+            <input type="submit" value="Gravar"/>
+        </form>
+    </div>
 </section>
 
 
