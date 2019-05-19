@@ -54,8 +54,10 @@
                             <div class="form-group">
                                 <label for="inputNome" class="col-lg-2 control-label">Nome do Jogador</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputNome" name="nome" placeholder="Digite o nome do jogador que deseja pesquisar!" value="">
+                                    <br>
+                                    <input type="text" class="form-control" id="inputNome" name="nome" size="37" placeholder="Digite o nome do jogador que deseja pesquisar!" value="">
                                 </div>
+                                <br>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-6 col-lg-offset-2">
