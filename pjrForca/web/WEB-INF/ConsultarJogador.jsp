@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: elias
-  Date: 14/05/19
-  Time: 15:14
+  User: gmoreli
+  Date: 19/05/19
+  Time: 15:04
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -37,37 +37,37 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
-    <title>Title</title>
+    <title>Pesquisar Jogador</title>
 </head>
 <body>
-<%@include file="menu.jsp"%>
 <section>
     <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
-
-        <form action="CadastroPalavraServlet" method="POST">
-            <div class="form-group">
-                <label for="palavraChave">Palavra a ser Cadastrada: </label>
-                <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
+        <!-- Painel da Pesquisa -->
+        <div class="container col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title h1">Pesquisar Jogador</h3>
+                </div>
+                <div class="panel-body">
+                    <form name="form_mvc" class="form-horizontal" action="Controle" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="inputNome" class="col-lg-2 control-label">Nome do Jogador</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputNome" name="nome" placeholder="Digite o nome do jogador que deseja pesquisar!" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-6 col-lg-offset-2">
+                                    <button type="submit" name="acao" class="btn btn-primary" value="pesquisar">Pesquisar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="dica">Dica para Palavra</label>
-                <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" required>
-            </div>
-            <div class="form-group">
-                <label for="dica">Grau de difiuldade</label>
-                <select name="dificuldade" id="dificuldade">
-                    <option> Dificuldade</option>
-                    <option> Facil</option>
-                    <option> Médio</option>
-                    <option> Díficil</option>
-                </select>
-            </div>
-            <input type="submit" value="Gravar"/>
-        </form>
+        </div>
     </div>
 </section>
-
-
-
 </body>
 </html>
