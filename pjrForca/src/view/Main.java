@@ -1,18 +1,14 @@
 package view;
 
-import dao.DaoGenerico;
+import dao.DaoUsuario;
 import model.Usuario;
 
 public class Main {
 
     public static void main(String[] args) {
-        DaoGenerico<Usuario> dU = new DaoGenerico<Usuario>();
-        Usuario user = new Usuario();
-        user.setNome("Windshow");
-        user.setLogin("windshow0w3");
-        user.setSenha("senha");
-        dU.saveOrUpdate(user);
-        System.out.println("rsrs");
+        DaoUsuario<Usuario> dU = new DaoUsuario<>();
+        Usuario usu  = (Usuario) dU.logar("windshow0w3", "senha", Usuario.class).get(0);
+        System.out.println(usu.getSenha());
     }
 
 }

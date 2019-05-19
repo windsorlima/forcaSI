@@ -1,13 +1,17 @@
 package controller;
 
+import dao.DaoUsuario;
 import model.Usuario;
+import model.UsuarioLogado;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -29,11 +33,19 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    private void processRequest(HttpServletRequest request, HttpServletResponse response) {
+    private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Usuario usu = new Usuario();
         usu.setLogin(request.getParameter("login"));
         usu.setSenha(request.getParameter("senha"));
-
+        PrintWriter pw = response.getWriter();
+        DaoUsuario<Usuario> dU = new DaoUsuario<>();
+        Usuario usuLog  = (Usuario) dU.logar(usu.getLogin(), usu.getSenha(), Usuario.class).get(0);
+        if(usuLog != null){
+            UsuarioLogado uL = UsuarioLogado.getInstance();
+            RequestDispatcher redireciona = request.getRequestDispatcher("index.jsp");
+            request.setAttribute("UsuarioLogado", usuLog);
+            redireciona.forward(request,response);
+        }
 
     }
 

@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 
 public class DaoGenerico<T extends EntidadeBase> {
 	
-	private static EntityManager manager = ConnectionFactory.getEntityManager();;
+	protected static EntityManager manager = ConnectionFactory.getEntityManager();
 	
 	public T findById(Class<T> clazz, Long id){
 		return manager.find(clazz, id);
@@ -38,5 +38,7 @@ public class DaoGenerico<T extends EntidadeBase> {
 			manager.getTransaction().rollback();
 		}
 	}
+
+
 
 }

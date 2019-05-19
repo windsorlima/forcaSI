@@ -50,14 +50,14 @@
                         </a>
                     </div>
                     <div class="login-form">
-                        <form action="" method="post">
+                        <form action="LoginServlet" method="post">
                             <div class="form-group">
                                 <label>Endereço de E-mail</label>
-                                <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                <input class="au-input au-input--full" type="text" name="login" placeholder="Login">
                             </div>
                             <div class="form-group">
                                 <label>Senha</label>
-                                <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                <input class="au-input au-input--full" type="password" name="senha" placeholder="Senha">
                             </div>
                             <div class="login-checkbox">
                                 <label>

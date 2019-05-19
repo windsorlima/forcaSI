@@ -56,7 +56,7 @@
             <label for="dica">Grau de difiuldade</label>
             <select name="dificuldade" id="dificuldade">
                 <option> Dificuldade</option>
-                <option> Fácil</option>
+                <option> Facil</option>
                 <option> Médio</option>
                 <option> Díficil</option>
             </select>
