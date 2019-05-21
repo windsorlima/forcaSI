@@ -13,6 +13,8 @@ public class Usuario implements EntidadeBase {
     private String nome;
     private String login;
     private String senha;
+    private int administrador;
+
 
     @OneToMany(mappedBy = "usuario", orphanRemoval = true)
     private List<Forca> forcas = new ArrayList<Forca>();
@@ -35,10 +37,9 @@ public class Usuario implements EntidadeBase {
     public String getSenha(){return senha;}
     public void setSenha(String senha){this.senha = senha;}
 
+    @Column(name = "adm")
+    public int getAdministrador() {return administrador;}
+    public void setAdministrador(int administrador){this.administrador = administrador;}
 
-    public Usuario logar(String login, String senha){
-
-        return null;
-    }
 
 }

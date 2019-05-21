@@ -39,17 +39,18 @@
     <title>Title</title>
 </head>
 <body>
+<%@include file="menu.jsp"%>
 <div class="formularioCadastro" style="margin: 0 auto;width: 50%;">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form action="LoginServlet" method="post">
         <h2>Entrar</h2>
         <br>
         <div class="form-group">
             <label>Login</label>
-            <input type="text" class="form-control" required="required">
+            <input type="text" name="login" class="form-control" required="required">
         </div>
         <div class="form-group">
             <label>Senha</label>
-            <input type="password" class="form-control" required="required">
+            <input type="password" name="senha" class="form-control" required="required">
         </div>
         <div class="form-group clearfix">
             <button type="submit" class="btn btn-primary pull-left">Conectar</button>

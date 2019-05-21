@@ -1,19 +1,26 @@
 <%--
   Created by IntelliJ IDEA.
-  User: elias
-  Date: 14/05/19
-  Time: 15:14
+  User: gmoreli
+  Date: 19/05/19
+  Time: 15:04
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: elias
-  Date: 14/05/19
-  Time: 15:14
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="dao.DaoUsuario" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%
+    if(!UsuarioLogado.verificaLogado()){
+        RequestDispatcher redireciona = request.getRequestDispatcher("Logar.jsp");
+        redireciona.forward(request, response);
+    }
+    List<Usuario> users = null;
+    if(true){
+        users =  new ArrayList<>();
+        users = DaoUsuario.listar(Usuario.class);
+        }
+
+%>
 <html>
 <head>
     <!-- Required meta tags-->
@@ -45,37 +52,37 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
-    <title>Title</title>
+    <title>Pesquisar Jogador</title>
 </head>
 <body>
-<%@include file="menu.jsp"%>
 <section>
-    <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
+    <%@include file="menu.jsp"%>
+    <div >
 
-        <form action="CadastroPalavraServlet" method="POST">
-            <div class="form-group">
-                <label for="palavraChave">Palavra a ser Cadastrada: </label>
-                <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
-            </div>
-            <div class="form-group">
-                <label for="dica">Dica para Palavra</label>
-                <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" required>
-            </div>
-            <div class="form-group">
-                <label for="dica">Grau de difiuldade</label>
-                <select name="dificuldade" id="dificuldade">
-                    <option> Dificuldade</option>
-                    <option> Facil</option>
-                    <option> Médio</option>
-                    <option> Díficil</option>
-                </select>
-            </div>
-            <input type="submit" value="Gravar"/>
-        </form>
+
+    <table>
+        <tr>
+            <th> ID </th>
+            <th> Nome </th>
+            <th> Login </th>
+            <th> Adm </th>
+            <th> Editar</th>
+            <th> Excluir</th>
+        </tr>
+        <% for(Usuario usuario : users){%>
+            <tr>
+                <td><%=usuario.getId()%></td>
+                <td><%=usuario.getNome()%></td>
+                <td><%=usuario.getLogin()%></td>
+                <td><%=usuario.getAdministrador()%></td>
+                <td> <a href="">Editar</a> </td>
+                <td> <a href="">Exclui</a> </td>
+            </tr>
+        <%}%>
+    </table>
+
+
     </div>
 </section>
-
-
-
 </body>
 </html>
