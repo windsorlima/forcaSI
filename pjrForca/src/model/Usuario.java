@@ -2,8 +2,6 @@ package model;
 
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Entity
@@ -16,8 +14,6 @@ public class Usuario implements EntidadeBase {
     private int administrador;
 
 
-    @OneToMany(mappedBy = "usuario", orphanRemoval = true)
-    private List<Forca> forcas = new ArrayList<Forca>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

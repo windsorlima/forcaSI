@@ -1,4 +1,6 @@
-<%--
+<%@ page import="model.UsuarioLogado" %>
+<%@ page import="dao.DaoPalavra" %>
+<%@ page import="model.Palavra" %><%--
   Created by IntelliJ IDEA.
   User: windsor
   Date: 08/04/19
@@ -6,7 +8,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%   String palavra = "Windsor Lima";%>
+<%
+    DaoPalavra dP = new DaoPalavra();
+    Palavra palavra = (Palavra) dP.sortear(Palavra.class);%>
 <html>
 <head>
     <!-- Required meta tags-->
@@ -46,13 +50,16 @@
            var d = document.getElementById("jogo");
            d.style.visibility = 'visible';
            document.getElementById('btnJogar').style.visibility = 'hidden';
+           document.getElementById('linkCadastrar').style.visibility = 'hidden';
+           document.getElementById('linkLogar').style.visibility = 'hidden';
        }
    </script>
     <script>
         //Script para fazer a contagem de chances e preenhcer a palavra escolhida sem atualizar a página.
         var contagem = 7;
+        var acertos = 0;
         function atribuirPalava(letra){
-            var forcaSorteada = '<%=palavra%>';
+            var forcaSorteada = '<%=palavra.getDescricao()%>';
 
             var flg = false;
             for(var i=1;i<=forcaSorteada.length;i++){
@@ -60,6 +67,7 @@
                 if(letra.toUpperCase() == forcaSorteada.charAt(i-1).toUpperCase()) {
                     document.getElementById(idLabel).textContent = letra;
                     flg = true;
+                    acertos++;
                 }
                 else{
                     document.getElementById(letra).disabled = true;
@@ -68,25 +76,40 @@
             console.log(flg);
             if(flg==false) {
                 contagem--;
+                document.getElementById('chances').textContent = contagem;
             }
             if(contagem==0){
                 alert("Game Over");
                 location.reload();
-
+            }
+            if(acertos == forcaSorteada.length){
+                alert("Você Venceu");
             }
         }
+
     </script>
 </head>
 <body>
-<%@include file="menu.jsp"%>
+<% UsuarioLogado uL = UsuarioLogado.getInstance();
 
-<button id="btnJogar" name="btnJogar" onclick="jogar()"> Jogar</button>
+%>
+<jsp:include page="<%=uL.retornaMenu()%>" />
 
+
+<div>
+    <%if(uL.getUser() != null){%>
+    <button id="btnJogar" name="btnJogar" onclick="jogar()"> Jogar</button>
+    <%} else{%>
+    <button id="btnJogar" name="btnJogar" onclick="jogar()"> Jogar sem Logar</button>
+    <a href="Logar.jsp" id="linkLogar"> Logar</a>
+    <a href="CadastrarUsuario.jsp" id="linkCadastrar"> Cadastre-se</a>
+    <%}%>
+</div>
 <div id="jogo" style="width: 600px; margin: 0 auto; margin-top:20%; visibility: hidden;" >
     <div  style="width:500px; margin:0 auto;">
         <%
             //Laço for para gerar labels para cada letra da palavra selecionada
-            char vet[] = palavra.toCharArray();
+            char vet[] = palavra.getDescricao().toCharArray();
             for(int i=1;i<=vet.length;i++){
                 if(vet[i-1] == ' ') {
                     vet[i - 1] = '-';
@@ -108,7 +131,13 @@
     <br>
     <%}
     }%>
+    <div>
+        <label> Chances:</label>
+        <label id="chances"> 7</label>
+    </div>
 </div>
+
+
 
 </body>
 </html>

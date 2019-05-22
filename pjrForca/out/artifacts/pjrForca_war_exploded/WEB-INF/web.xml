@@ -40,4 +40,22 @@
         <servlet-name>ConsultarJogadorServlet</servlet-name>
         <url-pattern>/ConsultarJogadorServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConsultarPalavraServlet</servlet-name>
+        <servlet-class>controller.ConsultarPalavraServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConsultarPalavraServlet</servlet-name>
+        <url-pattern>/ConsultarPalavraServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeslogarServlet</servlet-name>
+        <servlet-class>controller.DeslogarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeslogarServlet</servlet-name>
+        <url-pattern>/DeslogarServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

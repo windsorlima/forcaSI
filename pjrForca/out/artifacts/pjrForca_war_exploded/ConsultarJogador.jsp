@@ -7,18 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="dao.DaoUsuario" %>
-<%@ page import="java.util.List" %>
+<%@ page import="model.Usuario" %>
+<%@ page import="model.UsuarioLogado" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%
     if(!UsuarioLogado.verificaLogado()){
         RequestDispatcher redireciona = request.getRequestDispatcher("Logar.jsp");
         redireciona.forward(request, response);
     }
-    List<Usuario> users = null;
-    if(true){
-        users =  new ArrayList<>();
-        users = DaoUsuario.listar(Usuario.class);
-        }
+    List<Usuario> users =  new ArrayList<>();
+    users = DaoUsuario.listar(Usuario.class);
+
 
 %>
 <html>
@@ -56,7 +56,9 @@
 </head>
 <body>
 <section>
-    <%@include file="menu.jsp"%>
+    <% UsuarioLogado uL = UsuarioLogado.getInstance();
+    %>
+    <jsp:include page="<%=uL.retornaMenu()%>" />
     <div >
 
 
@@ -75,8 +77,8 @@
                 <td><%=usuario.getNome()%></td>
                 <td><%=usuario.getLogin()%></td>
                 <td><%=usuario.getAdministrador()%></td>
-                <td> <a href="">Editar</a> </td>
-                <td> <a href="">Exclui</a> </td>
+                <td> <a href="ConsultarJogadorServlet?acao=editar&id=<%=usuario.getId()%>">Editar</a> </td>
+                <td> <a href="ConsultarJogadorServlet?acao=excluir&id=<%=usuario.getId()%>">Excluir</a> </td>
             </tr>
         <%}%>
     </table>

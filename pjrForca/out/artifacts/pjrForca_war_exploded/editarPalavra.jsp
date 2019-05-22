@@ -1,11 +1,13 @@
-<%--
+<%@ page import="model.Palavra" %>
+<%@ page import="model.UsuarioLogado" %><%--
   Created by IntelliJ IDEA.
-  User: gmoreli
-  Date: 19/05/19
-  Time: 15:43
+  User: elias
+  Date: 14/05/19
+  Time: 15:14
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% Palavra palavra = (Palavra) request.getAttribute("Palavra");%>
 <html>
 <head>
     <!-- Required meta tags-->
@@ -37,30 +39,39 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
-    <title>Pesquisar Palavra</title>
+    <title>Title</title>
 </head>
 <body>
+<% UsuarioLogado uL = UsuarioLogado.getInstance();
+%>
+<jsp:include page="<%=uL.retornaMenu()%>" />
 <section>
     <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
-        <!-- Painel da Pesquisa -->
-        <div class="container col-md-6 col-md-offset-3">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title h1">Pesquisar Palavra</h3>
-                </div>
-                <div class="panel-body">
-                    <form name="form_mvc" class="form-horizontal" action="Controle" method="post">
-                        <fieldset>
-                            <div class="form-group">
-                                <label for="inputNome" class="col-lg-2 control-label">Palavra</label>
-                                <div class="col-lg-10">
-                                    <br>
-                                    <input type="text" class="form-control" id="inputNome" name="nome" size="29" placeholder="Digite a palavra que deseja pesquisar!" value="">
-                                </div>
-                                <br>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-6 col-lg-offset-2">
-                                    <button type="submit" name="acao" class="btn btn-primary" value="pesquisar">Pesquisar</button>
-                                </div>
-                            </div>
+
+        <form action="ConsultarPalavraServlet?acao=alterar" method="POST">
+            <div class="form-group">
+                <label for="palavraChave">Palavra a ser Cadastrada: </label>
+                <input type="text" class="form-control" id="palavraChave" name="descricao" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" value="<%=palavra.getDescricao()%>" required>
+            </div>
+            <div class="form-group">
+                <label for="dica">Dica para Palavra</label>
+                <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" value="<%=palavra.getDica()%>" required>
+            </div>
+            <div class="form-group">
+                <label for="dica">Grau de difiuldade</label>
+                <select name="dificuldade" id="dificuldade">
+                    <option> Dificuldade</option>
+                    <option> Facil</option>
+                    <option> Media</option>
+                    <option> Díficil</option>
+                </select>
+            </div>
+            <input type="text" name="id" class="form-control" value="<%=palavra.getId()%>" hidden>
+            <input type="submit" value="Alterar"/>
+        </form>
+        <button onclick="ConsultarPalavra.jsp"> Cancelar</button>
+    </div>
+</section>
+
+</body>
+</html>

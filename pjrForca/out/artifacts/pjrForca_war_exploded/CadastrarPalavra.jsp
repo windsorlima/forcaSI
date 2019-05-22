@@ -1,12 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: elias
-  Date: 14/05/19
-  Time: 15:14
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--
+<%@ page import="model.UsuarioLogado" %><%--
   Created by IntelliJ IDEA.
   User: elias
   Date: 14/05/19
@@ -48,7 +40,9 @@
     <title>Title</title>
 </head>
 <body>
-<%@include file="menu.jsp"%>
+<% UsuarioLogado uL = UsuarioLogado.getInstance();
+%>
+<jsp:include page="<%=uL.retornaMenu()%>" />
 <section>
     <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
 
@@ -66,7 +60,7 @@
                 <select name="dificuldade" id="dificuldade">
                     <option> Dificuldade</option>
                     <option> Facil</option>
-                    <option> Médio</option>
+                    <option> Media</option>
                     <option> Díficil</option>
                 </select>
             </div>

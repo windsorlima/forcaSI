@@ -1,8 +1,6 @@
 package model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Embeddable
 @Entity
@@ -12,8 +10,7 @@ public class Palavra  implements EntidadeBase{
     private String descricao;
     private String dificuldade;
     private String dica;
-    @OneToMany(mappedBy = "palavra", orphanRemoval = true)
-    private List<Forca> forcas = new ArrayList<Forca>();
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

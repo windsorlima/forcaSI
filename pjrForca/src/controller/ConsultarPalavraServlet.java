@@ -1,7 +1,7 @@
 package controller;
 
-import dao.DaoUsuario;
-import model.Usuario;
+import dao.DaoPalavra;
+import model.Palavra;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ConsultarJogadorServlet")
-public class ConsultarJogadorServlet extends HttpServlet {
+@WebServlet(name = "ConsultarPalavraServlet")
+public class ConsultarPalavraServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             processRequest(request, response);
@@ -35,10 +35,10 @@ public class ConsultarJogadorServlet extends HttpServlet {
         if(request.getParameter("acao").contains("excluir")){
             try {
                 Long id = Long.parseLong(request.getParameter("id"));
-                DaoUsuario dU = new DaoUsuario();
-                dU.remove(Usuario.class, id);
+                DaoPalavra dU = new DaoPalavra();
+                dU.remove(Palavra.class, id);
 
-                RequestDispatcher redireciona = request.getRequestDispatcher("ConsultarJogador.jsp");
+                RequestDispatcher redireciona = request.getRequestDispatcher("ConsultarPalavra.jsp");
                 redireciona.forward(request,response);
 
             }
@@ -47,30 +47,27 @@ public class ConsultarJogadorServlet extends HttpServlet {
             }
         }
         if(request.getParameter("acao").contains("editar")){
-            DaoUsuario dU = new DaoUsuario();
-            Usuario user = (Usuario) dU.findById(Usuario.class, Long.parseLong(request.getParameter("id")));
+            DaoPalavra dU = new DaoPalavra();
+            Palavra palavra = (Palavra) dU.findById(Palavra.class, Long.parseLong(request.getParameter("id")));
 
-            RequestDispatcher redirecionar = request.getRequestDispatcher("editarJogador.jsp");
-            request.setAttribute("Usuario", user);
+            RequestDispatcher redirecionar = request.getRequestDispatcher("editarPalavra.jsp");
+            request.setAttribute("Palavra", palavra);
             redirecionar.forward(request,response);
         }
 
         if(request.getParameter("acao").contains("alterar")){
-            Usuario usuario = new Usuario();
-            usuario.setId(Long.parseLong(request.getParameter("id")));
-            usuario.setNome(request.getParameter("nome"));
-            usuario.setSenha(request.getParameter("senha"));
-            usuario.setLogin(request.getParameter("login"));
-            usuario.setAdministrador(Integer.parseInt(request.getParameter("administrador")));
+            Palavra palavra = new Palavra();
+            palavra.setId(Long.parseLong(request.getParameter("id")));
+            palavra.setDescricao(request.getParameter("descricao"));
+            palavra.setDica(request.getParameter("dica"));
+            palavra.setDificuldade(request.getParameter("dificuldade"));
 
-            DaoUsuario dao = new DaoUsuario();
+            DaoPalavra dao = new DaoPalavra();
+            dao.saveOrUpdate(palavra);
 
-            dao.saveOrUpdate(usuario);
-
-            RequestDispatcher redireciona = request.getRequestDispatcher("ConsultarJogador.jsp");
+            RequestDispatcher redireciona = request.getRequestDispatcher("ConsultarPalavra.jsp");
             redireciona.forward(request,response);
 
         }
     }
-
 }

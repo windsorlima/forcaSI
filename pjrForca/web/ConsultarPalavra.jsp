@@ -1,4 +1,8 @@
-<%--
+<%@ page import="dao.DaoPalavra" %>
+<%@ page import="model.Palavra" %>
+<%@ page import="model.UsuarioLogado" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: gmoreli
   Date: 19/05/19
@@ -6,6 +10,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%     List<Palavra> palavras =  new ArrayList<>();
+    palavras = DaoPalavra.listar(Palavra.class);%>
 <html>
 <head>
     <!-- Required meta tags-->
@@ -40,27 +47,34 @@
     <title>Pesquisar Palavra</title>
 </head>
 <body>
-<section>
-    <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
-        <!-- Painel da Pesquisa -->
-        <div class="container col-md-6 col-md-offset-3">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title h1">Pesquisar Palavra</h3>
-                </div>
-                <div class="panel-body">
-                    <form name="form_mvc" class="form-horizontal" action="Controle" method="post">
-                        <fieldset>
-                            <div class="form-group">
-                                <label for="inputNome" class="col-lg-2 control-label">Palavra</label>
-                                <div class="col-lg-10">
-                                    <br>
-                                    <input type="text" class="form-control" id="inputNome" name="nome" size="29" placeholder="Digite a palavra que deseja pesquisar!" value="">
-                                </div>
-                                <br>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-6 col-lg-offset-2">
-                                    <button type="submit" name="acao" class="btn btn-primary" value="pesquisar">Pesquisar</button>
-                                </div>
-                            </div>
+    <% UsuarioLogado uL = UsuarioLogado.getInstance();
+%>
+<jsp:include page="<%=uL.retornaMenu()%>" />
+<div>
+
+        <table>
+            <tr>
+                <th style="padding-right: 10px;"> ID </th>
+                <th style="padding-right: 10px;"> Descricao </th>
+                <th style="padding-right: 10px;"> Dica </th>
+                <th style="padding-right: 10px;"> Dificuldade </th>
+                <th style="padding-right: 10px;"> Editar</th>
+                <th> Excluir</th>
+            </tr>
+            <% for(Palavra palavra : palavras){%>
+            <tr>
+                <td><%=palavra.getId()%></td>
+                <td><%=palavra.getDescricao()%></td>
+                <td><%=palavra.getDica()%></td>
+                <td><%=palavra.getDificuldade()%></td>
+                <td> <a href="ConsultarPalavraServlet?acao=editar&id=<%=palavra.getId()%>">Editar</a> </td>
+                <td> <a href="ConsultarPalavraServlet?acao=excluir&id=<%=palavra.getId()%>">Excluir</a> </td>
+            </tr>
+            <%}%>
+        </table>
+
+
+    </div>
+    </section>
+</body>
+</html>

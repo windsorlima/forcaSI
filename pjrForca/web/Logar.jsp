@@ -1,4 +1,4 @@
-<%--
+<%@ page import="model.UsuarioLogado" %><%--
   Created by IntelliJ IDEA.
   User: windsor
   Date: 15/05/19
@@ -39,7 +39,9 @@
     <title>Title</title>
 </head>
 <body>
-<%@include file="menu.jsp"%>
+<% UsuarioLogado uL = UsuarioLogado.getInstance();
+%>
+<jsp:include page="<%=uL.retornaMenu()%>" />
 <div class="formularioCadastro" style="margin: 0 auto;width: 50%;">
     <form action="LoginServlet" method="post">
         <h2>Entrar</h2>

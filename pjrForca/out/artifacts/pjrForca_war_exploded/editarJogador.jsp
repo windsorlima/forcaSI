@@ -1,3 +1,4 @@
+<%@ page import="model.Usuario" %>
 <%@ page import="model.UsuarioLogado" %><%--
   Created by IntelliJ IDEA.
   User: elias
@@ -6,6 +7,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    Usuario usuario = (Usuario)request.getAttribute("Usuario");
+%>
 <html>
 <head>
     <!-- Required meta tags-->
@@ -44,28 +48,33 @@
 %>
 <jsp:include page="<%=uL.retornaMenu()%>" />
 <section>
-    <div class="formularioPalavra" style="margin: 0 auto;width: 50%;">
-
-        <form action="CadastroPalavraServlet" method="POST">
+    <div class="formularioCadastro" style="margin: 0 auto;width: 67%;">
+        <form action="ConsultarJogadorServlet?acao=alterar" method="POST">
             <div class="form-group">
-                <label for="palavraChave">Palavra a ser Cadastrada: </label>
-                <input type="text" class="form-control" id="palavraChave" name="palavraChave" aria-describedby="palavraChave" placeholder="Escreva uma Palavra" required>
+                <label for="exampleInputNome">Nome</label>
+                <input type="text" class="form-control" id="exampleInputNome" name="nome" aria-describedby="nomelHelp" placeholder="Insira o seu Nome" value="<%=usuario.getNome()%>">
             </div>
             <div class="form-group">
-                <label for="dica">Dica para Palavra</label>
-                <input type="text" class="form-control" id="dica" name="dica" aria-describedby="dica" placeholder="Digite uma dica" required>
+                <label for="exampleInputLogin">Login </label>
+                <input type="text" class="form-control" id="exampleInputLogin" name="login" aria-describedby="emailHelp" placeholder="Crie um login!" value="<%=usuario.getLogin()%>">
             </div>
             <div class="form-group">
-                <label for="dica">Grau de difiuldade</label>
-                <select name="dificuldade" id="dificuldade">
-                    <option> Dificuldade</option>
-                    <option> Facil</option>
-                    <option> Media</option>
-                    <option> Díficil</option>
+                <label for="exampleInputPassword1">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="senha" value="<%=usuario.getSenha()%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Administrador</label>
+                <select name="administrador">
+                    <option value="3"> Administrador</option>
+                    <option value="1"> Sim</option>
+                    <option value="2"> Não</option>
                 </select>
             </div>
-            <input type="submit" value="Gravar"/>
+            <input type="text" name="id" class="form-control" value="<%=usuario.getId()%>" hidden>
+            <input type="submit" value="Alterar"/>
+
         </form>
+        <button onclick="ConsultarUsuario.jsp"> Cancelar</button>
     </div>
 </section>
 

@@ -28,6 +28,7 @@ public class CadastroServlet extends HttpServlet {
         usuario.setNome(request.getParameter("nome"));
         usuario.setSenha(request.getParameter("senha"));
         usuario.setLogin(request.getParameter("login"));
+        usuario.setAdministrador(2);
 
         DaoGenerico<Usuario> dao = new DaoGenerico<Usuario>();
 
