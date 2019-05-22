@@ -52,13 +52,13 @@
 <jsp:include page="<%=uL.retornaMenu()%>" />
 <div>
 
-        <table>
+        <table class="formularioCadastro" style="margin: 0 auto;width: 67%; margin-top: 30px;   ">
             <tr>
-                <th style="padding-right: 10px;"> ID </th>
-                <th style="padding-right: 10px;"> Descricao </th>
-                <th style="padding-right: 10px;"> Dica </th>
-                <th style="padding-right: 10px;"> Dificuldade </th>
-                <th style="padding-right: 10px;"> Editar</th>
+                <th style="padding-right: 30px;"> ID </th>
+                <th style="padding-right: 30px;"> Descricao </th>
+                <th style="padding-right: 30px;"> Dica </th>
+                <th style="padding-right: 30px;"> Dificuldade </th>
+                <th style="padding-right: 30px;"> Editar</th>
                 <th> Excluir</th>
             </tr>
             <% for(Palavra palavra : palavras){%>

@@ -56,14 +56,19 @@ public class ConsultarJogadorServlet extends HttpServlet {
         }
 
         if(request.getParameter("acao").contains("alterar")){
+            DaoUsuario dao = new DaoUsuario();
             Usuario usuario = new Usuario();
             usuario.setId(Long.parseLong(request.getParameter("id")));
             usuario.setNome(request.getParameter("nome"));
             usuario.setSenha(request.getParameter("senha"));
             usuario.setLogin(request.getParameter("login"));
-            usuario.setAdministrador(Integer.parseInt(request.getParameter("administrador")));
-
-            DaoUsuario dao = new DaoUsuario();
+            if(Integer.parseInt(request.getParameter("administrador"))== 3){
+                Usuario user2 = (Usuario) dao.findById(Usuario.class,usuario.getId());
+                usuario.setAdministrador(user2.getAdministrador());
+            }
+            else {
+                usuario.setAdministrador(Integer.parseInt(request.getParameter("administrador")));
+            }
 
             dao.saveOrUpdate(usuario);
 

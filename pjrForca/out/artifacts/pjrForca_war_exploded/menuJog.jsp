@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="DeslogarServlet"> Sair <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CadastrarPalavra.jsp">Cadastrar Palavra<span class="sr-only">(current)</span></a>
+                </li>
             </ul>
         </div>
     </nav>

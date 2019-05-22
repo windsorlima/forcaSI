@@ -62,16 +62,18 @@
     <div >
 
 
-    <table>
+    <table class="formularioCadastro" style="margin: 0 auto;width: 67%; margin-top: 30px; ">
         <tr>
-            <th> ID </th>
-            <th> Nome </th>
-            <th> Login </th>
-            <th> Adm </th>
-            <th> Editar</th>
-            <th> Excluir</th>
+            <th style="padding-right: 30px;"> ID </th>
+            <th style="padding-right: 30px;"> Nome </th>
+            <th style="padding-right: 30px;"> Login </th>
+            <th style="padding-right: 30px;"> Adm </th>
+            <th style="padding-right: 30px;"> Editar</th>
+            <th style="padding-right: 30px;"> Excluir</th>
         </tr>
-        <% for(Usuario usuario : users){%>
+        <%  UsuarioLogado uL2 = UsuarioLogado.getInstance();
+            for(Usuario usuario : users){
+            if(uL2.getId()!=usuario.getId()){%>
             <tr>
                 <td><%=usuario.getId()%></td>
                 <td><%=usuario.getNome()%></td>
@@ -80,7 +82,7 @@
                 <td> <a href="ConsultarJogadorServlet?acao=editar&id=<%=usuario.getId()%>">Editar</a> </td>
                 <td> <a href="ConsultarJogadorServlet?acao=excluir&id=<%=usuario.getId()%>">Excluir</a> </td>
             </tr>
-        <%}%>
+        <%}}%>
     </table>
 
 

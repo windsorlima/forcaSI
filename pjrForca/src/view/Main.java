@@ -9,8 +9,8 @@ public class Main {
 
         DaoUsuario dU = new DaoUsuario();
         Usuario user = new Usuario();
-        user.setNome("wind");
-        user.setLogin("wind");
+        user.setNome("wind1");
+        user.setLogin("wind1");
         user.setSenha("senha");
         user.setAdministrador(1);
         dU.saveOrUpdate(user);

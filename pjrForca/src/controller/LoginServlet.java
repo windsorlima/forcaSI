@@ -42,16 +42,16 @@ public class LoginServlet extends HttpServlet {
             PrintWriter pw = response.getWriter();
             DaoUsuario<Usuario> dU = new DaoUsuario<>();
             Usuario usuLog = (Usuario) dU.logar(usu.getLogin(), usu.getSenha(), Usuario.class).get(0);
-            if (usuLog != null) {
+            if (usuLog.getNome() != null) {
                 UsuarioLogado uL = UsuarioLogado.getInstance();
-                RequestDispatcher redireciona = request.getRequestDispatcher("index.jsp");
                 uL.setUser(usuLog);
+                RequestDispatcher redireciona = request.getRequestDispatcher("index.jsp");
                 redireciona.forward(request, response);
-            } else {
+            }
+            else{
                 RequestDispatcher redireciona = request.getRequestDispatcher("Logar.jsp");
                 redireciona.forward(request, response);
             }
-
     }
 
 }

@@ -96,17 +96,23 @@
 <jsp:include page="<%=uL.retornaMenu()%>" />
 
 
-<div>
+<div class="formularioCadastro" style="margin: 0 auto;width: 67%; margin-top: 30px;">
     <%if(uL.getUser() != null){%>
     <button id="btnJogar" name="btnJogar" onclick="jogar()"> Jogar</button>
     <%} else{%>
-    <button id="btnJogar" name="btnJogar" onclick="jogar()"> Jogar sem Logar</button>
-    <a href="Logar.jsp" id="linkLogar"> Logar</a>
-    <a href="CadastrarUsuario.jsp" id="linkCadastrar"> Cadastre-se</a>
-    <%}%>
+    <ul style="list-style: none;" >
+        <li> <button id="btnJogar" name="btnJogar" onclick="jogar()"> Jogar sem Logar</button> </li>
+        <li> <a href="Logar.jsp" id="linkLogar"> Logar</a></li>
+        <li> <a href="CadastrarUsuario.jsp" id="linkCadastrar"> Cadastre-se</a></li>
+    </ul>
+            <%}%>
 </div>
-<div id="jogo" style="width: 600px; margin: 0 auto; margin-top:20%; visibility: hidden;" >
+<div id="jogo" style="width: 600px; margin: 0 auto; margin-top:10%; visibility: hidden;" >
+    <uL style="list-style: none;">
+
     <div  style="width:500px; margin:0 auto;">
+        <li>
+
         <%
             //Laço for para gerar labels para cada letra da palavra selecionada
             char vet[] = palavra.getDescricao().toCharArray();
@@ -115,14 +121,17 @@
                     vet[i - 1] = '-';
                 }
                 if(vet[i-1] == '-'){%>
-        <a id="letra<%=i-1%>" style="border-left: 10px;"  > - </a>
+        <a id="letra<%=i-1%>"  > - </a>
         <%} else {%>
-        <a id="letra<%=i-1%>" style="border-left: 10px;"  > __  </a>
+        <a id="letra<%=i-1%>" > __  </a>
 
         <%}
         }%>
+            </li>
         <br>
+            <br>
     </div>
+    <li>
     <% //Laço for para gerar teclas da forca
         for(char i='A';i<='Z';i++ ) {%>
     <button type="button" class="btn btn-sucess" style="width: 50px;"  id="<%=i%>" onclick="atribuirPalava('<%=i%>')"  > <%=i%> </button>
@@ -131,10 +140,13 @@
     <br>
     <%}
     }%>
-    <div>
-        <label> Chances:</label>
-        <label id="chances"> 7</label>
-    </div>
+    </li>
+    <li><label> Chances:</label></li>
+    <li><label id="chances"> 7</label></li>
+
+    </uL>
+
+
 </div>
 
 
